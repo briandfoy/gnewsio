@@ -1,10 +1,10 @@
-package GNews;
+package GNewsIO;
 use strict;
 use warnings;
 
 =encoding utf8
 
-=head1 The build file for GNews
+=head1 The build file for GNewsIO
 
 This build file is a modulino; it works as both a build script and
 a module.
@@ -40,7 +40,7 @@ use File::Spec::Functions qw(catfile);
 my $module    = __PACKAGE__;
 ( my $dist = $module ) =~ s/::/-/g;
 
-my $github    = 'https://github.com/briandfoy/gnews';
+my $github    = 'https://github.com/briandfoy/gnewsio';
 my $main_file = catfile( 'lib', split /::/, "$module.pm" );
 
 my %WriteMakefile = (
@@ -65,7 +65,11 @@ my %WriteMakefile = (
 		},
 
 	'PREREQ_PM' => {
-		'Carp' => '0',
+		'Carp'               => '0',
+		'Hash::AsObject'     => '0',
+		'Mojolicious'        => '9',
+		'Storable'           => '0',
+		'String::Redactable' => '0',
 		},
 
 	'META_MERGE' => {
