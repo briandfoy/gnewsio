@@ -1,0 +1,248 @@
+---
+_defaults:
+  max: 10
+  page: 1
+_meta:
+  commit: fe46ad31230e8673d709e9f083ad1a356720c140
+  dirty: true
+  generated: Mon Mar  2 02:37:45 2026
+  generator: util/make_search_rx.pl
+  repo: git@github.com:briandfoy/gnews.git
+  url: https://docs.gnews.io/endpoints/search-endpoint
+optional:
+  country:
+    of:
+    - //nil
+    - type: //str
+      value: ar
+    - type: //str
+      value: au
+    - type: //str
+      value: bd
+    - type: //str
+      value: br
+    - type: //str
+      value: ca
+    - type: //str
+      value: cn
+    - type: //str
+      value: co
+    - type: //str
+      value: eg
+    - type: //str
+      value: fr
+    - type: //str
+      value: de
+    - type: //str
+      value: gr
+    - type: //str
+      value: hk
+    - type: //str
+      value: in
+    - type: //str
+      value: id
+    - type: //str
+      value: ie
+    - type: //str
+      value: il
+    - type: //str
+      value: it
+    - type: //str
+      value: jp
+    - type: //str
+      value: my
+    - type: //str
+      value: mx
+    - type: //str
+      value: nl
+    - type: //str
+      value: no
+    - type: //str
+      value: pk
+    - type: //str
+      value: pe
+    - type: //str
+      value: ph
+    - type: //str
+      value: pt
+    - type: //str
+      value: ro
+    - type: //str
+      value: ru
+    - type: //str
+      value: sg
+    - type: //str
+      value: es
+    - type: //str
+      value: se
+    - type: //str
+      value: ch
+    - type: //str
+      value: tw
+    - type: //str
+      value: tr
+    - type: //str
+      value: ua
+    - type: //str
+      value: gb
+    - type: //str
+      value: us
+    type: //any
+  from: &1
+    type: tag:example.com,EXAMPLE:rx/datetime/iso8601
+  in:
+    of:
+    - //nil
+    - type: //str
+      value: title
+    - type: //str
+      value: description
+    - type: //str
+      value: content
+    - type: //str
+      value: title,description
+    - type: //str
+      value: title,content
+    - type: //str
+      value: description,title
+    - type: //str
+      value: description,content
+    - type: //str
+      value: content,title
+    - type: //str
+      value: content,description
+    - type: //str
+      value: title,description,content
+    - type: //str
+      value: title,content,description
+    - type: //str
+      value: description,title,content
+    - type: //str
+      value: description,content,title
+    - type: //str
+      value: content,title,description
+    - type: //str
+      value: content,description,title
+    type: //any
+  lang:
+    of:
+    - //nil
+    - type: //str
+      value: ar
+    - type: //str
+      value: bn
+    - type: //str
+      value: zh
+    - type: //str
+      value: nl
+    - type: //str
+      value: en
+    - type: //str
+      value: fr
+    - type: //str
+      value: de
+    - type: //str
+      value: el
+    - type: //str
+      value: he
+    - type: //str
+      value: hi
+    - type: //str
+      value: id
+    - type: //str
+      value: it
+    - type: //str
+      value: ja
+    - type: //str
+      value: ml
+    - type: //str
+      value: mr
+    - type: //str
+      value: no
+    - type: //str
+      value: pt
+    - type: //str
+      value: pa
+    - type: //str
+      value: ro
+    - type: //str
+      value: ru
+    - type: //str
+      value: es
+    - type: //str
+      value: sv
+    - type: //str
+      value: ta
+    - type: //str
+      value: te
+    - type: //str
+      value: tr
+    - type: //str
+      value: uk
+    type: //any
+  max:
+    range:
+      max: 100
+      min: 1
+    type: //int
+  nullable:
+    of:
+    - //nil
+    - type: //str
+      value: title
+    - type: //str
+      value: description
+    - type: //str
+      value: content
+    - type: //str
+      value: title,description
+    - type: //str
+      value: title,content
+    - type: //str
+      value: description,title
+    - type: //str
+      value: description,content
+    - type: //str
+      value: content,title
+    - type: //str
+      value: content,description
+    - type: //str
+      value: title,description,content
+    - type: //str
+      value: title,content,description
+    - type: //str
+      value: description,title,content
+    - type: //str
+      value: description,content,title
+    - type: //str
+      value: content,title,description
+    - type: //str
+      value: content,description,title
+    type: //any
+  page:
+    range:
+      min: 1
+    type: //int
+  sortby:
+    of:
+    - //nil
+    - type: //str
+      value: publishedAt
+    - type: //str
+      value: relevance
+    type: //any
+  to: *1
+  truncate:
+    of:
+    - //nil
+    - type: //str
+      value: contents
+    type: //any
+required:
+  q:
+    length:
+      max: 200
+      min: 1
+    type: //str
+type: //rec
+

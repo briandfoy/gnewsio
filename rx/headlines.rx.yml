@@ -1,0 +1,229 @@
+---
+_defaults:
+  category: general
+  max: 10
+  page: 1
+_meta:
+  commit: fe46ad31230e8673d709e9f083ad1a356720c140
+  dirty: true
+  generated: Mon Mar  2 02:37:45 2026
+  generator: util/make_search_rx.pl
+  repo: git@github.com:briandfoy/gnews.git
+  url: https://docs.gnews.io/endpoints/top-headlines-endpoint
+optional:
+  category:
+    of:
+    - //nil
+    - type: //str
+      value: general
+    - type: //str
+      value: world
+    - type: //str
+      value: nation
+    - type: //str
+      value: business
+    - type: //str
+      value: technology
+    - type: //str
+      value: entertainment
+    - type: //str
+      value: sports
+    - type: //str
+      value: science
+    - type: //str
+      value: health
+    type: //any
+  country:
+    of:
+    - //nil
+    - type: //str
+      value: ar
+    - type: //str
+      value: au
+    - type: //str
+      value: bd
+    - type: //str
+      value: br
+    - type: //str
+      value: ca
+    - type: //str
+      value: cn
+    - type: //str
+      value: co
+    - type: //str
+      value: eg
+    - type: //str
+      value: fr
+    - type: //str
+      value: de
+    - type: //str
+      value: gr
+    - type: //str
+      value: hk
+    - type: //str
+      value: in
+    - type: //str
+      value: id
+    - type: //str
+      value: ie
+    - type: //str
+      value: il
+    - type: //str
+      value: it
+    - type: //str
+      value: jp
+    - type: //str
+      value: my
+    - type: //str
+      value: mx
+    - type: //str
+      value: nl
+    - type: //str
+      value: no
+    - type: //str
+      value: pk
+    - type: //str
+      value: pe
+    - type: //str
+      value: ph
+    - type: //str
+      value: pt
+    - type: //str
+      value: ro
+    - type: //str
+      value: ru
+    - type: //str
+      value: sg
+    - type: //str
+      value: es
+    - type: //str
+      value: se
+    - type: //str
+      value: ch
+    - type: //str
+      value: tw
+    - type: //str
+      value: tr
+    - type: //str
+      value: ua
+    - type: //str
+      value: gb
+    - type: //str
+      value: us
+    type: //any
+  from: &1
+    type: tag:example.com,EXAMPLE:rx/datetime/iso8601
+  lang:
+    of:
+    - //nil
+    - type: //str
+      value: ar
+    - type: //str
+      value: bn
+    - type: //str
+      value: zh
+    - type: //str
+      value: nl
+    - type: //str
+      value: en
+    - type: //str
+      value: fr
+    - type: //str
+      value: de
+    - type: //str
+      value: el
+    - type: //str
+      value: he
+    - type: //str
+      value: hi
+    - type: //str
+      value: id
+    - type: //str
+      value: it
+    - type: //str
+      value: ja
+    - type: //str
+      value: ml
+    - type: //str
+      value: mr
+    - type: //str
+      value: no
+    - type: //str
+      value: pt
+    - type: //str
+      value: pa
+    - type: //str
+      value: ro
+    - type: //str
+      value: ru
+    - type: //str
+      value: es
+    - type: //str
+      value: sv
+    - type: //str
+      value: ta
+    - type: //str
+      value: te
+    - type: //str
+      value: tr
+    - type: //str
+      value: uk
+    type: //any
+  max:
+    range:
+      max: 100
+      min: 1
+    type: //int
+  nullable:
+    of:
+    - //nil
+    - type: //str
+      value: title
+    - type: //str
+      value: description
+    - type: //str
+      value: image
+    - type: //str
+      value: title,description
+    - type: //str
+      value: title,image
+    - type: //str
+      value: description,title
+    - type: //str
+      value: description,image
+    - type: //str
+      value: image,title
+    - type: //str
+      value: image,description
+    - type: //str
+      value: title,description,image
+    - type: //str
+      value: title,image,description
+    - type: //str
+      value: description,title,image
+    - type: //str
+      value: description,image,title
+    - type: //str
+      value: image,title,description
+    - type: //str
+      value: image,description,title
+    type: //any
+  page:
+    range:
+      min: 1
+    type: //int
+  q:
+    length:
+      max: 200
+      min: 1
+    type: //str
+  to: *1
+  truncate:
+    of:
+    - //nil
+    - type: //str
+      value: contents
+    type: //any
+required: {}
+type: //rec
+
