@@ -15,3 +15,6 @@ nytprof
 \.icloud$
 \A\.github\b
 \.gitattributes\b
+
+.downstream.json
+cpan_tester_reports
