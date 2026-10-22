@@ -43,3 +43,4 @@ inc/
 test.rx
 test.json
 test-supported.pl
+.claude/
